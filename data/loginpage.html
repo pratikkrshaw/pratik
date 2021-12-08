@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html  class="background">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merriweather&display=swap" rel="stylesheet">
+<style>
+	.background{
+		background-color: #E6E6FA;
+		width: 100%;
+	}
+	.logo{
+		color: #1C2D9C;
+		font-size: 60px;
+		font-family: Poppins;
+	}
+	
+	#logo-background{
+		background-color: lightblue;
+		border-radius: 10px;
+		text-align: center;	
+	}
+	.input-border{
+		border-radius: 10px;
+		padding: 13px;
+		border-style: solid;
+	}
+	.input-border-background{
+		background-color: lightblue;
+ 		padding: 20px;
+		margin: 0% 35% 0% 35%;
+	}
+	#submit-button{
+		background-color: #43437F;
+		border-radius: 10px;
+		padding: 13px;
+		font-family: Bree Serif;
+		font-size: 15px;
+		width: 195px;
+		color: white;
+	}
+	footer{
+		font-family: Poppins; 
+		font-size: 13px;
+		text-align: right;
+	}	
+</style>
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+<main>
+	<div id="logo-background">
+		<h1 class="logo">ADMIN LOGIN</h1>
+	</div>
+	<form action="https://docs.google.com/spreadsheets/u/1/d/1tLx08um2BpKiA_1piQjPGQJlXxpC1KfduVut2baPO-g/edit?usp=drivesdk&urp=gmail_link">
+	<div class="input-border-background " id="logo-background">
+		<p><input type="email" placeholder="Email address" class="input-border" required></p>
+		<p><input type="password" placeholder="Password" class="input-border" required></p>
+		<button type="submit" id="submit-button">LOGIN</button>
+		<p><input type="checkbox">Remember me</p>
+		<label for="forgot">
+		<a href="#" name="forgot" style="font-family:monospace;">forgot password?</a></label>
+	</div>
+	</form>
+</main>
+	<footer><p>Created By Pratik</p>
+	</footer>
+</body>	
+</html>

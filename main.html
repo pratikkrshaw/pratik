@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">	<!-- Headings Font -->
+<link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">	<!-- Headings Inside Box Font -->
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">	    <!-- Copyright Logo -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<style>
+	html{
+		background-image: url("img/mainback.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		max-width: 100%;
+        height: auto;
+        scroll-behavior: smooth;
+	}
+    .flexing{
+        display: flex;
+    }
+    .cont{
+        display: none;
+    }
+	.menu-border{
+		font-size: 2.8125em;
+        border-radius: 6px 0 0 6px;
+		font-family: Satisfy,monospace;
+		color: white;
+		background-color: rgba(0,0,0,0.9);
+        width: 20%;
+        height: 20%;
+        padding: 0 0 0 20px;
+        margin: -8px 0 0 -8px;
+	}
+	.menu-box{
+		background-color: rgb(0,0,0,0.9);
+		font-size: 1em;
+		font-family: Bebas Neue,Boogaloo;
+        width: 100%;
+        border-radius: 0 6px 6px 0;
+        height: 43px;
+        margin: -8px -8px 0 0;
+        padding: 22px 0 0 210px;
+	}
+    .menu-button{
+		border-radius: 6px;
+		padding: 8px;
+		width: 100px;
+		font-family: Bebas Neue, Satisfy,Boogaloo;
+		background-color: rgb(52,56,61);
+		opacity: 1;
+		border-style: hidden;
+		color: white;
+        cursor: pointer;
+		font-size: 1.125em;
+		margin: -20px 0px -20px 0px;
+	}
+	.menu-button:hover{
+		background-color: rgba(255,153,10,1);
+    }
+	.img-size{
+		width: 30px;
+	}
+	.headings{
+		text-align: center;
+		font-size: 2.1875em;
+		font-family: Satisfy,monospace;
+		color: white;
+		background-color: black;
+		border-radius: 6px;
+		padding: 10px 0px 10px 0px;
+		opacity: 0.9;
+		margin: 2% 10% 0% 10%;	
+	}
+	.heading-box{
+		background-color: rgb(128,128,128,0.9);
+		font-size: 1.0625em;
+		border-radius: 6px;
+		padding: 20px 0px 20px 0px;
+		margin: 0% 10% 2% 10%;	
+		font-family: Boogaloo;	
+	}
+	#textbox{
+		text-align: center;
+        
+	}
+	.input-text-border{
+		border-radius: 6px;
+		border-style: solid;
+		padding: 6px;
+		width: 20%;
+		margin-left: 1%;
+	}
+	.com-text{
+		border-radius: 6px;
+		border-style: solid;
+		margin-left: 1.5%;
+	}
+	.submit-button{
+		border-radius: 6px;
+		padding: 6px;
+		width: 100px;
+		margin: 8px 0 0 0;
+		font-size: 1em;
+		font-family:Boogaloo;
+        border-style: none;
+		background-color: lightgrey;
+         cursor: pointer;
+	}
+    .s-flex{
+        display:flex;
+        justify-content: center;
+    }
+	.submit-button:hover{
+		background-color: rgba(55,160,160,1);
+        color: white;
+	}
+	footer{
+		text-align: center;	
+		font-family: VT323;
+		font-size: 0.9375em;
+		padding-top: 6px;
+	}
+	.logo{
+		text-align: center;
+	}
+	#projects{
+		width: 700px;
+		border-radius: 4px;
+		box-shadow: 1px 2px 7px black;
+	}
+	.proj-butt{
+		border-radius: 6px;
+		padding: 6px;
+		width: 200px;
+		font-size: 1em;
+        border-style: none;
+		font-family: Boogaloo;
+		background-color: lightgrey;
+        margin-top: 8px;
+		 cursor: pointer;
+	}
+	.proj-butt:hover{
+		background-color: rgba(55,160,160,1);
+        color:white;
+	}
+    .proj-butt2{
+		border-radius: 6px;
+		padding: 6px;
+		width: 400px;
+		font-size: 1em;
+        border-style: none;
+		font-family: Boogaloo;
+		background-color: lightgrey;
+        margin-top: 8px;
+		 cursor: pointer;
+	}
+    .proj-butt2:hover{
+        background-color: rgba(255,0,32,1);
+        color: white;
+    }
+    hr{
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-color: #525252;
+    }
+	#line{
+		margin: 2% 2% 2%  2%;
+	}
+    .galleryphoto{
+        max-width:200px;
+        height: auto;
+        border-radius: 2%;
+        box-shadow: 3px,3px,2px,0px,white;
+         cursor: pointer;
+    }
+    .galleryphoto:hover{
+        transform: scale(1.1);
+    }
+    .size{
+        width: 40px;
+        height:auto;
+    }
+    .arrow-but{
+        width: 180px;
+        height: 180px;
+        border-radius: 10%;
+        font-size: 19px;
+         cursor: pointer;
+    }
+    .arrow-but:hover{
+        opacity: 0.7;
+    }
+    .com-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .first-name{
+        margin-left: 1.5%;
+    }
+    .last-name{
+        margin-left:31%;
+    }
+    .email-id{
+        margin-left: 1.3%;
+    }
+    .comment-text{
+        margin-left: 1.4%;
+    }
+    .foot-color{
+        color: white;
+    }
+    textarea{
+        max-width: 95%;
+    }
+    .linee{
+        transition: border-bottom 0.1s ease-in-out;
+    }
+    .linee:hover{
+        border-bottom: solid #525252;
+        border-radius: 2px;
+    }
+    .container{
+        margin: 20px 0 20px 0;
+    }
+    .container .shape{
+		position: relative;
+		border-style: none;
+		border-radius: 20px;
+		background-image: url("img/pback.jpg");
+		width: 170px;
+		height: 170px;
+		text-align:center;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+	}
+	.p1{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 170px;
+		height: 170px;
+	}
+    .shape{
+        transition: transform 0.3s;
+    }
+    .shape:hover{
+        transform: scale(1.05);
+    }
+	.p1:hover{
+		transform : scale(1.11);
+		position: absolute;
+		top: -9px;
+	}
+    #pline{
+        width: 170px;
+    }
+    .ptext{
+        opacity: 0.8;  
+        text-align:center;
+    }
+    @media(min-width:941px) and (max-width: 980px){
+        .menu-box{
+            padding: 22px 0 0 65px;
+        }    
+        .headings{
+            font-size: 1.2em;	
+	    }   
+        .abt{
+            font-size: 0.5125em;
+        } 
+        .comment-text{
+            font-size: 0.4125em;
+        }
+        .foot-color{
+            font-size: 0.5125em;
+        }
+        .ptext{
+            font-size: 0.5125em;
+            margin-bottom: 20px;
+        }
+
+    }
+    @media (max-width:940px){
+        html{
+            background-image: url("img/mob.jpg");
+        }
+        .flexing{
+            flex-direction: column;
+        }
+        .cont{
+    		border-style: solid;
+    		border-color:white;
+    		width: 27px;
+    		height: 0;
+    		border-radius: 10px;
+    		margin: -26px 0 26px 88%;
+    		display:flex;
+    		justify-content: center;
+    		cursor: pointer;
+    		transition: border-color ease 0.3s;
+            
+    	}
+	    .cont::before{
+	    	content: " ";
+	    	position: absolute;
+	    	top: 18px;
+	    	border-style: solid;
+	    	border-color: white;
+	    	width: 27px;
+		    height: 0;
+		    border-radius: 10px;
+	    	cursor: pointer;
+	    	transition: transform ease 1s;
+	    }
+    	.cont::after{
+    		content: " ";
+    		position: absolute;
+    		top: 33px;
+    		border-style: solid;
+    		border-color: white;
+    		width: 27px;
+    		height: 0;
+    		cursor: pointer;	
+    		border-radius: 10px;
+    		transition: transform ease 1s;
+    	}
+    	.cont:hover{
+    		border-style: solid;
+    		border-color: black;
+    		width: 27px;
+    		height: 0;
+    		border-radius: 10px;
+    		margin: -26px 0 26px 88%;
+    		display:flex;
+    		justify-content: center;
+    	}
+    	.cont:hover::before{
+    		content: " ";
+    		position: absolute;
+    		top: 25px;
+    		border-style: solid;
+    		border-color: white;
+     		width: 32px;
+    		height: 0;
+    		border-radius: 10px;
+    		transform: rotate(40deg);
+    	}
+    	.cont:hover::after{
+    		content: " ";
+    		position: absolute;
+    		top: 25px;
+    		border-style: solid;
+    		border-color: white;
+    		width: 32px;
+    		height: 0;
+    		border-radius: 10px;
+    		transform: rotate(-40deg);
+    	}
+        .navg{   
+            display: none;
+        }
+        .cont:hover .navg{
+	    	position: absolute;
+	    	top: 53.7px;
+            left: 0;
+	    	border-style: none;
+	    	background-color: grey;
+	    	border-radius: 5px;
+	    	width: 100%;
+	    	height: 48px;
+            display: flex;
+            z-index: 1;
+            padding-top: 10px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .img-sze{
+            width: 27px;   
+            transition: transform linear 0.1s;  
+        }
+        .img-sze:hover{
+            transform: scale(1.2);
+        }
+       .menu-border{
+            font-size: 1.8em;
+            width: 104%;
+            padding: 10px 0 0 0;
+            border-radius: 0;
+            margin: -8px 0 0 -8px;
+        }
+        .menu-box{
+            background-color: rgb(128,128,128,0.9);
+	    	width: 104%;
+            padding: 0;
+            border-radius: 0;
+            text-align: center;
+            border-radius: 4px;
+            margin: 0 0 0 -8px;
+            display: none;
+      	}
+        .menu-button{
+            font-family: Satisfy,Boogaloo;
+            background-color: rgb(52,56,61);
+	    	border-radius: 10px;
+	    	padding: 5px 0px 5px 0px;
+	    	width: 65px;
+	    	font-size: 0.9375em;
+		    margin: 5px 0 0 0;
+	    }
+        textarea{
+            max-width:92%;
+            
+        }
+	    #projects{
+		    max-width: 90%;
+	    }
+        .headings{
+            font-size: 28px;
+		    margin-left: 5%;
+            margin-right: 5%;	
+	    }
+	    .heading-box{
+	    	margin-left: 5%;
+            margin-right: 5%;
+            font-size: 0.8125em;
+	    }
+        .proj-butt{
+    		border-radius: 6px;
+	    	padding: 6px;
+            font-size: 0.8125em;
+	    	max-width: 45%;
+	    }
+        .proj-butt2{
+    		border-radius: 6px;
+	    	padding: 6px;
+            font-size: 0.8125em;
+	    	max-width: 55%;
+	    }
+        .galleryphoto{
+            max-width: 28%;
+            height: auto;
+            margin-left:0;
+            border-radius: 4%;
+            box-shadow: 3px,3px,2px,0px,white;
+        }
+        .arrow-but{
+            max-width: 8%;
+            height: auto;
+            border-radius: 20%;
+            border-style: none;
+        }
+        .left-but{
+            position: absolute;
+            left: 20%;
+            margin-top: 29%;
+        }
+        .right-but{
+            position: absolute;
+            right: 20%;
+            margin-top: 29%;
+        }
+        .first-name,.email-id,.comment-text,.com-text{
+            margin-left: 3%;
+        }
+        .last-name{
+            margin-left: 2%;
+        }
+        .input-text-border{
+            border-radius: 6px;
+		    border-style: solid;
+    		padding: 4px;
+	    	width: 21%;
+            font-size: 0.8125em;
+	    	margin-left: 0;
+        }
+        .submit-button{
+            font-size: 0.8125em;
+	       	padding: 5px;
+	    	width: 80px;
+	    	margin: 4px 0 0 0;
+	    }
+        .foot-color{
+            color: white;
+            font-size: 0.8125em;
+        }
+        .img-size{
+		    width: 25px;
+	    }
+        .size{
+            width: 30px;
+        }
+        hr{
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-color: #525252;
+        }
+        #line{
+		    margin: 3% 4% 3% 4%;
+	    }  
+        .container .shape{
+		    width: 150px;
+		    height: 150px;
+	    }
+	    .p1{
+            width: 150px;
+		    height: 150px;
+	    }
+        .p1:hover{
+            top:-8px;
+        }
+    }
+</style>
+<head>
+    <link rel = "icon" href="logo/headlog.ico" type="image/x-icon">
+    <meta name="theme-color" content="#000">
+	<title>Main Page : Pratik Shaw</title>
+</head>
+<main>
+<body>
+    <div class="flexing">
+	    <div class="menu-border">
+            <img src="img/logo.png" style="width: 80px;" alt="logo">
+            <div class="cont">
+                <nav class="navg">
+                    <a href="https://pratik.unaux.com"><img src="navi/home-icon.png" class="img-sze"></a>
+	    	        <a href="#project"><img src="navi/presentation.png" class="img-sze"></a>
+	                <a href="#gallery"><img src="navi/image-gallery.png" class="img-sze"></a>
+	    	        <!-- <a href="#news"><button value="About Me" class="menu-button">News</button></a> -->
+	        	    <a href="#comment"><img src="navi/comment.png" class="img-sze"></a>
+	        	    <a href="#aboutme"><img src="navi/request.png" class="img-sze"></a>
+		        </nav>
+            </div>
+        </div>
+	    <div class="menu-box">
+	    	<a href="https://pratik.unaux.com"><button value="home" class="menu-button">Home</button></a>
+	    	<a href="#project"><button value="project" class="menu-button">Project</button></a>
+	    	<a href="#gallery"><button value="gallery" class="menu-button">Gallery</button></a>
+	    	<!-- <a href="#news"><button value="About Me" class="menu-button">News</button></a> -->
+		    <a href="#comment"><button value="comment" class="menu-button">Comment</button></a>
+		    <a href="#aboutme"><button value="About Me" class="menu-button">About Me</button></a>
+		    <!--    
+                    <input type="search" class="search logo" placeholder="Type here to search">
+		            <a href="#"><button value="search" class="menu-button" style="background-color: red;">Search</button></a> 
+
+            CSS 
+
+            .search{
+		        border-radius: 6px;
+	    	    padding: 8px;
+        		width: 300px;
+        		text-align: left;
+        		font-family: Satisfy, Boogaloo;
+        		background-color: white;
+        		border-style: solid;
+    	    	font-size: 1.125em;
+    	    	margin: -20px 0px -20px 50px;
+            }
+            -->
+	    </div>
+    </div>
+	<h2 class="headings" id="project" >My Projects</h2>
+    <div class="heading-box logo">
+		<img src="img/project1.PNG" alt="Project: Login Page" id="projects">
+		<form action="data/loginpage.html" target="_blank">
+			<button type="submit" class="proj-butt" >Project 1: Login Page</button>
+		</form>
+		<hr id="line">
+		<img src="img/project2.PNG" alt="Project: Snake Game" id="projects">
+		<form action="data/Snake.exe" target="_blank">
+			<button type="submit" class="proj-butt" >Project 2: Snake Game</button>
+		</form>
+        <hr id="line">
+        <img src="img/project3.png" alt="Project: Loading Animation" id="projects">
+        <form action="data/newshape.html" target="__blank">
+            <button type="submit" class="proj-butt">Project 3: Loading Animation</button>
+        </form>
+        <hr id="line">
+        <form action="https://codepen.io/pratikshaw" target="__blank">
+            <button type="submit"  class="proj-butt2"><img src="img/tour-guide.png" class="size" alt="more project icon"><p>Checkout More Projects!</p></button>
+        </form>
+	</div>
+
+	<h2 class="headings" id="gallery" >Gallery</h2>
+	<div class="heading-box logo">
+        <div class="com-flex">
+            <!-- <button type="submit" class="arrow-but left-but" ><b><</button></b> -->
+            <img src="photo/photo1.jpg" alt="Photo 1" class="galleryphoto" >
+            <img src="photo/photo2.jpg" alt="Photo 2" class="galleryphoto">
+            <img src="photo/photo3.jpg" alt="Photo 3" class="galleryphoto">
+            <!-- <button type="submit" class="arrow-but right-but" ><b>></button></b> -->
+        </div>
+        <br>
+        <div class="com-flex">
+            <!-- <button type="submit" class="arrow-but left-but" ><b><</button></b> -->
+            <img src="photo/photo4.jpg" alt="Photo 4" class="galleryphoto" >
+            <img src="photo/photo5.jpg" alt="Photo 5" class="galleryphoto">
+            <img src="photo/photo6.jpg" alt="Photo 6" class="galleryphoto">
+            <!-- <button type="submit" class="arrow-but right-but" ><b>></button></b> -->
+        </div>
+        <br>
+        <form action="contruct.html" >
+        <button type="submit" class="proj-butt" style="margin-top: 10px;">View All</button>
+        </form>
+    </div>
+
+	    <!--
+                <h2 class="headings" style="margin:-10.35% 10% 0% 50%;" id="news">News</h1>
+	            <div class="heading-box" style="margin-left: 50%;"></div>
+        -->
+	
+    <form>
+	<h2 class="headings" id="comment">Comments</h2>
+	<div class="heading-box ">
+        <div>
+    		<label for="fname" class="first-name">First name:</label>
+    		<input type="text" placeholder="First Name" id="fname" name="fname" class="input-text-border" required>
+    		<label for="lname" class="last-name">Last name:</label>
+    		<input type="text" placeholder="Last Name" id="lname" name="lname" class="input-text-border" required><br>
+    		<br><label for="email" class="email-id">Email Id:</label>
+	    	<input type="email" placeholder="Email address" id="email" style="margin-left:2.65%; width:35%; " name="email" class="input-text-border" required><br>
+	    	<p class="comment-text">Comment:</p>
+	    	<textarea rows="5" cols="125" class="com-text"></textarea>
+        </div>
+        <div class="s-flex">
+            <button type="submit" class="submit-button">Submit</button>
+	    </div>
+	</div>
+	</form>
+
+	<h2 class="headings" id="aboutme">About Me</h2>
+	<div class="heading-box">
+        <div class="container">
+		    <div class="shape">
+			    <img src="img/photo.png" class="p1">
+		    </div>
+	    </div>
+        <hr id="pline">
+            <h2 class="ptext">PRATIK SHAW</h2>
+            <p class="ptext" style="margin-top: -15px;"><i>Developer | Traveller</i></p>
+        <hr id="pline">
+        <br>
+		<p style="padding: 2px 0px 10px 0px; margin: 0px 17px 0px 15px;" class="abt">Hey! Myself Pratik. Welcome to my website. Just created this website for fun! Hope you guys love it, It took a lot of time and effort to make it! I just post pictures and Projects done by me in this website!If you have any ideas to include in this site then make sure to leave a comment and do follow me on Social sites!</p>
+		<div class="logo abt">
+			<hr id="line">
+            <p>Follow Me:</p>
+            <a href="https://facebook.com/ipratikshaw" target="_blank" style="text-decoration: none;"><img src="img/facebook.png" class="img-size linee">
+			<a href="https://instagram.com/pratik_shaw_" target="_blank" style="text-decoration: none;"><img src="img/insta.png" class="img-size linee">
+			<a href="https://twitter.com/pratik_shaw_" target="_blank" style="text-decoration: none;"><img src="img/twitter.png" class="img-size linee">
+			<a href="pratikshaw5@gmail.com" target="_blank" style="text-decoration: none;"><img src="img/google.png" class="img-size linee"></a>
+            
+			<footer>Email: <a href="mailto:pratikshaw5@gmail.com" target="_blank">pratikshaw5@gmail.com</a></footer>
+		</div>
+	</div>
+</main>
+    <div>
+	    <footer class="foot-color">Copyright Reserved: 2019-2021</footer>
+	    <footer class="foot-color">Created by Pratik <span style="color: #FF5C5C;">&hearts;</span></footer> 
+    </div>
+</body>
+</html>

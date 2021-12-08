@@ -1,0 +1,8 @@
+<html>
+<h1>LOGIN</h1>
+<main>
+	<p>Email Id: <input type="text" placeholder="Enter Email id" required></p>
+	<p>Password: <input type="text" placeholder="Enter Password" required></p>
+	<button type="submit">Log In</button>
+</main>	
+</html>
