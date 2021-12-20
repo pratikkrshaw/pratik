@@ -66,22 +66,58 @@
 		font-size: 0.9375em;
 		padding-top: 6px;
 	}
-	@media (max-width:940px){
+    .img-s{
+        width: 80px;
+        height: 21.5px; 
+    }
+    .sii{
+        width: 30px; 
+        height: 30px;
+        opacity:0.9; 
+        margin-top: 15px;
+
+    }
+	@media (max-width:1080px){
         	html{
             		background-image: url("img/mob.jpg");
         	}
+            .menu-border{
+                height: 6%;
+            }
+            .heading-box{
+                margin-top: 150px;
+            }
 		.img-size{
 			border-radius: 4px;
-			max-width: 28%;
+			max-width: 25%;
             		height: auto;
 		}
+        .sii{
+            width: 80px;
+            height: 80px;
+        }
 		.text-pos{
-			left: 42%;
+            font-size: 45px;
+			left: 40%;
+            top: -40px;
 		}
+        .logo-pos{
+            top: 40px;
+        }
+        .img-s{
+            width: 200px;
+            height: 51.5px; 
+        }
 		.foot-color{
             		color: white;
-            		font-size: 0.8125em;
+            		font-size: 1.1125em;
         	}
+            #line{
+                   border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-color: #525252;
+            }
 	}
 </style>
 <head>
@@ -95,13 +131,13 @@
 <main>
 <body>
 	<div class="menu-border">
-		<a href="https://pratikkrshaw.github.io/pratik/main.html"><img src="ret.png" style="width: 30px; height: 30px; opacity:0.9; margin-top: 15px;"></a>
+		<a href="main.html"><img src="ret.png" class="sii"></a>
             	
 		<div class="text-pos">
 			<h2 id="gallery">Gallery</h2>
 		</div>
 		<div class="logo-pos">
-			<img src="img/logo.png" style="width: 80px; height: 21.5px; " alt="logo" >
+			<img src="img/logo.png" class="img-s" alt="logo" >
 		</div>
 	</div>
 	
@@ -161,6 +197,7 @@
 	    <footer class="foot-color">Copyright Reserved: 2019-2021</footer>
 	    <footer class="foot-color">Created by Pratik <span style="color: #FF5C5C;">&hearts;</span></footer> 
 	</div>
+	<br>
 </body>
 </main>
 </html>
