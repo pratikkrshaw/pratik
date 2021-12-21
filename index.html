@@ -10,6 +10,89 @@
 		max-width: 100%;
         height: auto;
 	}
+	#loading{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(255,255,255,1);
+		z-index: 9999;
+	}
+	.dshape{
+		border-width: 15px;
+		border-style: solid;
+		border-color: white;
+		background-color: white;
+		border-radius: 5px 30px 30px 0;
+		margin: 19% 50% 0 47%;
+		padding: 10px;
+		animation-name: p1;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0);
+		animation-fill-mode: forwards;
+	}
+	.lshape{
+		border-left:15px;
+		border-right: 0;
+		border-top: 0;
+		border-bottom: 0;
+		border-style: solid;
+		border-color: white;
+		margin: 0% 50% 0 47%;
+		padding-bottom:30px;
+		animation-name: l1;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0);
+		animation-fill-mode: forwards;
+		
+	}
+	@keyframes p1{
+		0%{
+			border-color: white;
+		}
+		35%{	
+			border-bottom-color:  #C70039 ;
+		}
+		50%{
+			border-bottom-color: #C70039 ;
+			border-left-color: #191970;
+			border-right-color: #023020;
+		}
+		75%{
+			border-bottom-color:  #C70039 ;
+			border-left-color: #191970;
+			border-right-color: #023020;
+			border-top-color: #581845;
+		}
+		90%{
+			border-bottom-color:  #C70039 ;
+			border-left-color: #191970;
+			border-right-color: #023020;
+			border-top-color: #581845;
+			
+		}
+		100%{
+			border-color:white;
+		}
+	}
+	@keyframes l1{
+		0%{
+			border-color:white;
+		}
+		25%{
+			border-color: #FF5733;
+		}
+		90%{
+			border-color: #FF5733;
+		}
+		100%{
+			border-color:white;
+		}
+	}
+	
     .head-align{
         margin: 8% 20% 0 20%;
     }
@@ -159,6 +242,12 @@
         html{
             background-image: url("img/mob.jpg");
         }
+	.dshape{
+            margin: 50% 50% 0 45%;
+        }
+        .lshape{
+            margin: 0% 50% 0 45%;
+        }
         .head-align{
             margin: 50% 4% 0 4%;
     	}
@@ -189,8 +278,12 @@
     <meta name="google-site-verification" content="kDeNM91n7VlZoZyaoaR8caXKTny_GI00eviiPb2Y7j4" />
     <meta name="theme-color" content="#000">
 </head>
-<body>
 <main>
+<body onload="myloadingfunc()">
+    <div id="loading">
+		<div class="dshape"></div>
+		<div class="lshape"></div>
+	</div>
     <div class="heading">
 		<img src="img/logo.png">
     </div>
@@ -320,6 +413,12 @@
 
             <!-- <a href="#" ><img src="img/feedback4.png"  style="right:30%; width: 22px;" ></a> -->
     </div>    
+<script>
+	    var preloader = document.getElementById("loading");
+	    function myloadingfunc(){
+	    	preloader.style.display="none";
+	    }
+    </script>
 </body>
 </main>
 </html>
