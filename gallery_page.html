@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	html{
+		background-image: url("img/mainback.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		max-width: 100%;
+        	height: auto;
+        	scroll-behavior: smooth;
+	}
+	#loading{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(255,255,255,0.95);
+		z-index: 9999;
+	}
+	.dshape{
+		border-width: 15px;
+		border-style: solid;
+		border-color: white;
+		background-color: white;
+		border-radius: 5px 30px 30px 0;
+		margin: 19% 50% 0 47%;
+		padding: 10px;
+		animation-name: p1;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0);;
+		animation-fill-mode: forwards;
+	}
+	.lshape{
+		border-left:15px;
+		border-right: 0;
+		border-top: 0;
+		border-bottom: 0;
+		border-style: solid;
+		border-color: white;
+		margin: 0% 50% 0 47%;
+		padding-bottom:30px;
+		animation-name: l1;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0);;
+		animation-fill-mode: forwards;
+		
+	}
+	@keyframes p1{
+		0%{
+			border-color: white;
+		}
+		35%{	
+			border-bottom-color:  #C70039 ;
+		}
+		50%{
+			border-bottom-color: #C70039 ;
+			border-left-color: #191970;
+			border-right-color: #023020;
+		}
+		75%{
+			border-bottom-color:  #C70039 ;
+			border-left-color: #191970;
+			border-right-color: #023020;
+			border-top-color: #581845;
+		}
+		90%{
+			border-bottom-color:  #C70039 ;
+			border-left-color: #191970;
+			border-right-color: #023020;
+			border-top-color: #581845;
+			
+		}
+		100%{
+			border-color:white;
+		}
+	}
+	@keyframes l1{
+		0%{
+			border-color:white;
+		}
+		25%{
+			border-color: #FF5733;
+		}
+		90%{
+			border-color: #FF5733;
+		}
+		100%{
+			border-color:white;
+		}
+	}
+	.menu-border{
+		position: fixed;
+		top: 0;
+		color: white;
+		background-color: rgba(0,0,0,0.9);
+        	width: 100%;
+        	height: 8.5%;
+		padding: 0 0 16px 16px;
+       		margin: 0 0 0 -8px;
+		z-index: 1;
+	}
+	.ret-pos{
+		width: 30px;
+		height: 30px;
+		opacity:0.9;
+		margin-top: 15px;
+	}
+	.text-pos{
+		position: absolute;
+		top: -20px;
+		left: 45%;		
+		font-size: 1.6em;
+		font-family: Passion One, Satisfy,monospace;
+		color: white;
+		opacity: 0.9;
+	}
+	.logo-pos{
+		position: absolute;
+		right: 40px;
+		top: 20px;	
+	}
+	.heading-box{
+		background-color: rgb(128,128,128,0.9);
+		font-size: 1.0625em;
+		border-radius: 6px;
+		padding: 0 0 20px 0;
+		margin: 20px 1% 10px 1%;	
+		font-family: Boogaloo;	
+	}
+	.album-text{
+		font-size: 1.5em;
+		color: rgba(255,255,255,0.9);
+		width: 200px;
+		border-radius: 5px;
+		font-family: Boogaloo;	
+		margin: 90px 0 0 1%;
+		text-align: center;
+		background-color: rgb(0,0,0,0.9);
+		padding: 10px;
+	}
+	.img-size{
+		border-radius: 4px;
+		width: 300px;
+		transition:box-shadow 0.2s linear;
+	}
+	.img-size:hover{
+		box-shadow: 1px 2px 15px 1px black;
+	}
+	#view-img{
+		display:none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.9);
+		z-index: 9999;
+	}
+	#img-s{
+		position: absolute;
+		left: 32%;
+		top: 10%;
+		width:35%;
+		height: auto;
+	}
+	.close {
+  		position: absolute;
+  		top: 15px;
+  		right: 35px;
+  		color: #f1f1f1;
+  		font-size: 40px;
+  		font-weight: bold;
+  		transition: 0.3s;
+	}
+	.close:hover,.close:focus {
+  		color: #bbb;
+  		text-decoration: none;
+  		cursor: pointer;
+	}
+	#caption {
+  		position: absolute;
+		bottom: -100px;
+		left: 23%;
+		font-size: 1.2em;
+  		width: 80%;
+  		max-width: 700px;
+  		text-align: center;
+  		color: #ccc;
+  		padding: 10px 0;
+  		height: 150px;
+	}
+	.flex-img{
+		display: flex;
+		flex-direction: row;
+        	justify-content: space-evenly;
+		padding: 22px 0 22px 0;
+		
+	}
+	.foot-color{
+        	color: white;
+    	}
+	footer{
+		text-align: center;	
+		font-family: VT323;
+		font-size: 0.9375em;
+		padding-top: 6px;
+	}
+	 @media(min-width:941px) and (max-width: 980px){
+		
+	}
+	@media (max-width:940px){
+        	html{
+            		background-image: url("img/mob.jpg");
+        	}
+		#img-s{
+			left: 20%;
+			top: 10%;
+			width:60%;
+		}
+		.close {
+  			right: 30px;
+  			font-size: 30px;
+		}
+		#caption {
+			bottom: -120px;
+			left: 10%;
+			font-size: 0.8em;
+		}
+		.img-size{
+			border-radius: 4px;
+			max-width: 28%;
+            		height: auto;
+		}
+		.ret-pos{
+			margin-top: 20px;
+			width: 25px;
+			height: 25px;
+		}
+		.album-text{
+			font-size: 1.5em;
+			color: rgba(255,255,255,0.9);
+			width: 93%;
+			border-radius: 5px;
+			font-family: Boogaloo;	
+			margin: 90px 1% 0 1%;
+			text-align: center;
+			background-color: rgb(0,0,0,0.9);
+			padding: 10px;
+		}
+		.text-pos{
+			left: 39%;
+		}
+		.foot-color{
+            		color: white;
+            		font-size: 0.8125em;
+        	}
+	}
+</style>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet"> 	
+	<link rel = "icon" href="logo/headlog.ico" type="image/x-icon">
+    	<meta name="theme-color" content="#000">
+	<title>Photo Gallery</title>
+</head>
+<main>
+<body onload="myloadingfunc()">
+	<div id="loading">
+		<div class="dshape"></div>
+		<div class="lshape"></div>
+	</div>
+	<div class="menu-border">
+		<a href="https://pratikkrshaw.github.io/pratik/main.html"><img src="ret.png" class="ret-pos"></a>
+            	
+		<div class="text-pos">
+			<h2 id="gallery">Gallery</h2>
+		</div>
+		<div class="logo-pos">
+			<img src="img/logo.png" style="width: 80px; height: 21.5px; " alt="logo" >
+		</div>
+	</div>
+	<h2 class="album-text">Travel Pictures</h2>
+	<div class="heading-box">
+		
+		<div class="flex-img">
+		<img src="gallery/travel/p1.jpg" class="img-size" alt="“Just A Pose!”" onclick="extendimage(this)">
+		
+		<img src="gallery/travel/p (2).jpg" class="img-size" alt="“Being Happy Never Goes Out Of Style!”" onclick="extendimage(this)">
+		
+		<img src="gallery/travel/p (3).jpg" class="img-size" alt="“Some days start better than others.”" onclick="extendimage(this)">
+		
+		</div>
+		<div class="flex-img">
+		<img src="gallery/travel/p (4).jpg" class="img-size" alt="“Today I will be as useless as the ‘g’ in lasagna.”" onclick="extendimage(this)">
+		
+		<img src="gallery/travel/p (5).jpg" class="img-size" alt="“Throw sass around like confetti.”" onclick="extendimage(this)">
+		
+		<img src="gallery/travel/p (6).jpg" class="img-size" alt="“Hella heart eyes for you.”" onclick="extendimage(this)">
+		</div>
+
+		<div class="flex-img">
+		<img src="gallery/travel/p (7).jpg" class="img-size" alt="“Decluttering my life like Marie Kondo.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (8).jpg" class="img-size" alt="“Life is simple. It’s just not easy.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (9).jpg" class="img-size" alt="“You can’t live a full life on an empty stomach.”" onclick="extendimage(this)">
+		</div>
+					
+		<div class="flex-img">
+		<img src="gallery/travel/p (10).jpg" class="img-size" alt="“Get out there and live a little.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (11).jpg" class="img-size" alt="“I’m not high maintenance, you’re just low effort.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (12).jpg" class="img-size" alt="“Whatever is good for your soul, do that.”" onclick="extendimage(this)">
+		</div>
+
+		<div class="flex-img">
+		<img src="gallery/travel/p (13).jpg" class="img-size" alt="“The way you speak to yourself matters the most.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (14).jpg" class="img-size" alt="“A little contour and confidence.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (15).jpg" class="img-size" alt="“Smile a little more, regret a little less.”" onclick="extendimage(this)">
+		</div>
+
+		<div class="flex-img">
+		<img src="gallery/travel/p (16).jpg" class="img-size" alt="“Grow through what you go through.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (17).jpg" class="img-size" alt="“I don’t know where I’m going, but I’m on my way.”" onclick="extendimage(this)">
+		<img src="gallery/travel/p (18).jpg" class="img-size" alt="“Sure, I do marathons. On Netflix.”" onclick="extendimage(this)">
+		</div><br>
+		<img src="gallery/travel/p (19).jpg" class="img-size" alt="“When nothing goes right, go left.”" onclick="extendimage(this)" style="display: block; margin-left:auto; margin-right:auto;">
+		<br>
+	</div>
+	<h2 class="album-text" style="margin-top: 1%;">Random Pictures</h2>
+	<div class="heading-box">
+		<div class="flex-img">
+		<img src="gallery/p (1).jpg" class="img-size" alt="“Vodka may not be the answer but it’s worth a shot.”" onclick="extendimage(this)">
+		<img src="gallery/p (2).jpg" class="img-size" alt="“It’s not a phase mom, it’s who I am.”" onclick="extendimage(this)">
+		<img src="gallery/p (3).jpg" class="img-size" alt="“There’s no ‘we’ in fries.”" onclick="extendimage(this)">
+		</div>
+		
+		<div class="flex-img">
+		<img src="gallery/p (4).jpg" class="img-size" alt="“I need a six month holiday, twice a year.”" onclick="extendimage(this)">
+		<img src="gallery/p (5).jpg" class="img-size" alt="“If I was funny, I would have a good Instagram caption.”" onclick="extendimage(this)">
+		<img src="gallery/p (6).jpg" class="img-size" alt="“At least my pizza still loves me.”" onclick="extendimage(this)">
+		</div>
+		
+		<div class="flex-img">
+		<img src="gallery/p (7).jpg" class="img-size" alt="“May your coffee be hot and your eyeliner even.”" onclick="extendimage(this)">
+		<img src="gallery/p (8).jpg" class="img-size" alt="“Morning coffee, because anything else is worthless.”" onclick="extendimage(this)">
+		
+		</div>
+		<div id="view-img" onclick="this.style.display='none'">
+			<span class="close">&times;</span>
+			<img id="img-s">
+			<div id="caption"></div>
+		</div>
+	</div>
+	<div>
+	    <footer class="foot-color">Copyright Reserved: 2019-2021</footer>
+	    <footer class="foot-color">Created by Pratik <span style="color: #FF5C5C;">&hearts;</span></footer> 
+	</div>
+	<script>
+		var preloader = document.getElementById("loading");
+		function myloadingfunc(){
+			preloader.style.display="none";
+		}
+		var modal = document.getElementById("view-img");
+		var modalImg = document.getElementById("img-s");
+		var captionText=document.getElementById("caption");
+		function extendimage(element){
+ 			modal.style.display = "block";
+  			modalImg.src = element.src;
+ 			captionText.innerHTML = element.alt;
+		}
+		var span = document.getElementsByClassName("close")[0];
+		span.onclick = function() { 
+  			modal.style.display = "none";
+		}
+	</script>
+</body>
+</main>
+</html>
