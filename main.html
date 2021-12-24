@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">	<!-- Headings Inside Box Font -->
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">	    <!-- Copyright Logo -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <style>
@@ -188,6 +189,67 @@
 		background-color: lightgrey;
          cursor: pointer;
 	}
+	#alertback{
+        display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.4);
+		z-index: 9998;
+	}
+    #alert-logo{
+        width:75px; 
+        height: 22.5px;
+        margin-left: 10px;
+        margin-top:10px;
+    }
+    #check-logo{
+        width:70px; 
+        height: 70px;
+        padding-top: 10px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #alertbox1{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        height: 42px;
+        margin: 13% 0 0 35%;
+        border-radius: 4px;
+        background-color: rgb(0,0,0,1);
+    }
+    #alertbox2{
+        width: 30%;
+        height: 175px;
+        margin: 0 0 0 35%;
+        text-align:right;
+        border-radius: 4px;
+        background-color: white;
+    }
+    #close-btn {
+        width: 50px;
+        height:30px;
+  		color: #000;
+        margin: 0 2% 0 0;
+        background-color: #04ecf0;
+        border-style:none;
+        border-radius: 4px;
+  		font-size: 13px;
+  		font-weight: bold;
+        cursor: pointer;
+	}
+	#close-btn:hover,#close-btn:focus {
+  		opacity:0.8;
+	}
+    .text-style{
+        font-family:Secular One,monospace;
+        text-align:center;
+
+    }
     .s-flex{
         display:flex;
         justify-content: center;
@@ -367,6 +429,9 @@
         .comment-text{
             font-size: 0.4125em;
         }
+	   #alertbox1{
+            margin-top: 50%;
+    }
         .foot-color{
             font-size: 0.5125em;
         }
@@ -581,6 +646,32 @@
 	    	width: 80px;
 	    	margin: 4px 0 0 0;
 	    }
+	    #alert-logo{
+        width:75px; 
+        height: 22.5px;
+        margin-left: 10px;
+        margin-top:10px;
+    }
+    #check-logo{
+        width:60px; 
+        height: 60px;
+    }
+    #alertbox1{
+        width: 80%;
+        margin: 50% 0 0 10%;
+    }
+    #alertbox2{
+        width: 80%;
+        height: 140px;
+        display:block;
+        margin:0 0 0 10%;
+    }
+    #close-btn {
+        width: 40px;
+        height:20px;
+        margin: 0 2% 0 0;
+  		font-size: 10px;
+	    }
         .foot-color{
             color: white;
             font-size: 0.8125em;
@@ -718,7 +809,7 @@
     
 	<h2 class="headings" id="comment">Comments</h2>
 	<div class="heading-box ">
-	<form action="https://formsubmit.co/horrayinsider@gmail.com" method="POST"/>
+	<form action="https://formsubmit.co/horrayinsider@gmail.com" method="POST" onsubmit="myalert(this)"/>
     		<label for="fname" class="first-name">First name:</label>
     		<input type="text" placeholder="First Name" id="fname" name="fname" class="input-text-border" required>
     		<label for="lname" class="last-name">Last name:</label>
@@ -726,13 +817,25 @@
     		<br><label for="email" class="email-id">Email Id:</label>
 	    	<input type="email" placeholder="Email address" id="email" style="margin-left:2.65%; width:35%; " name="email" class="input-text-border" required><br>
 	    	<p class="comment-text">Comment:</p>
-		<textarea rows="5" cols="125" class="com-text"></textarea>
+		<textarea rows="5" cols="125" class="com-text" name="comment-area"></textarea>
 		<input type="hidden" name="_next" value="https://pratikkrshaw.github.io/pratik/main.html">
                 <input type="hidden" name="_captcha" value="false">
         <div class="s-flex">
-            <button type="submit" onclick="alert('Thanks For the Feedback!')" class="submit-button">Submit</button>
+            <button type="submit" class="submit-button">Submit</button>
 	    </div>
 	</form>
+	<div id="alertback" onclick="this.style.display='none'">
+                <div id="alertbox1">
+                    <img src="img/logo.png" id="alert-logo" alt="logo">
+                </div>
+                
+                <div id="alertbox2">
+                    <img src="check.gif" id="check-logo">
+                    <p class="text-style">Thanks For the Feedback!</p>
+                    <button type="button" id="close-btn">OK</button>
+                </div>
+
+        </div>
 	</div>
 
 	<h2 class="headings" id="aboutme">About Me</h2>
@@ -769,6 +872,14 @@
 	    function myloadingfunc(){
 		    preloader.style.display="none";
 	    }
+	 var alert=document.getElementById("alertback");
+        function myalert(element){
+            alert.style.display = "block";
+        }
+        var span = document.getElementsById("close-btn")[0];
+		span.onsubmit = function() { 
+  			alert.style.display = "none";
+		}
     </script>
 </body>
 </main>
