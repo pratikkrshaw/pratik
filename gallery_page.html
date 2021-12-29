@@ -95,6 +95,8 @@
 	.menu-border{
 		position: fixed;
 		top: 0;
+		display: flex;
+        	justify-content: space-around;
 		color: white;
 		background-color: rgba(0,0,0,0.9);
         	width: 100%;
@@ -110,18 +112,14 @@
 		margin-top: 15px;
 	}
 	.text-pos{
-		position: absolute;
-		top: -20px;
-		left: 45%;		
+		margin-top: 15px;	
 		font-size: 1.6em;
 		font-family: Passion One, Satisfy,monospace;
 		color: white;
 		opacity: 0.9;
 	}
 	.logo-pos{
-		position: absolute;
-		right: 40px;
-		top: 20px;	
+		margin-top: 15px;	
 	}
 	.heading-box{
 		background-color: rgb(128,128,128,0.9);
@@ -210,38 +208,38 @@
 		padding-top: 6px;
 	}
 	 @media(min-width:941px) and (max-width: 980px){
-		 .dshape{
-                border-width: 50px;
-                padding: 30px;
-                margin: 50% 50% 0 44%;
-                border-radius: 30px 100px 100px 0;
-        }
-        .lshape{
-                border-left-width: 50px;
-                padding-bottom: 100px;
-                margin: 0% 50% 0 44%;
-        }
+		.dshape{
+                	border-width: 50px;
+                	padding: 30px;
+                	margin: 50% 50% 0 44%;
+                	border-radius: 30px 100px 100px 0;
+        	}
+        	.lshape{
+                	border-left-width: 50px;
+                	padding-bottom: 100px;
+                	margin: 0% 50% 0 44%;
+        	}
 		.text-pos{
-			left: 44%;
+			margin-top: 15px;
 		}
-        .album-text{
-            margin: 80px 1% -8px 1%;
-            width: 98%;
-            font-size: 1.7em;
-            padding: 10px 0 10px 0;
-        }
-        .img-size{
+        	.album-text{
+            		margin: 80px 1% -8px 1%;
+            		width: 98%;
+            		font-size: 1.7em;
+            		padding: 10px 0 10px 0;
+        	}
+        	.img-size{
 			border-radius: 4px;
 			max-width: 25%;
-            height: auto;
+            		height: auto;
 		}
-        #img-s{
+        	#img-s{
 			left: 18%;
 			top: 20%;
 			width:65%;
 		}
-        .close {
-            top: 30px;
+        	.close{
+           		top: 30px;
   			right: 30px;
   			font-size: 50px;
 		}
@@ -250,21 +248,21 @@
 			left: 15%;
 			font-size: 1.5em;
 		}
-        .foot-color{
-            color: white;
-            font-size: 1.2125em;
-        }
+        	.foot-color{
+            		color: white;
+            		font-size: 1.2125em;
+        	}
 	}
 	@media (max-width:940px){
         	html{
             		background-image: url("img/mob.jpg");
         	}
 		.dshape{
-            margin: 200px 50% 0 45%;
-        }
-        .lshape{
-            margin: 0% 50% 0 45%;
-        }
+           		 margin: 200px 50% 0 45%;
+        	}
+        	.lshape{
+            		margin: 0% 50% 0 45%;
+        	}
 		#img-s{
 			left: 18%;
 			top: 20%;
@@ -282,17 +280,12 @@
 		.img-size{
 			border-radius: 4px;
 			max-width: 28%;
-            height: auto;
+        		height: auto;
 		}
 		.ret-pos{
-			margin-top: 22px;
 			width: 25px;
 			height: 25px;
 		}
-        .logo-pos{
-            top: 25px;
-            right: 25px;
-        }
 		.album-text{
 			font-size: 1.5em;
 			color: rgba(255,255,255,0.9);
@@ -304,17 +297,16 @@
 			background-color: rgb(0,0,0,0.9);
 			padding: 10px 0 10px 0;
 		}
-        .flex-img{
-		    padding: 22px 0 5px 0;
-	    }
+        	.flex-img{
+		    	padding: 22px 0 5px 0;
+	    	}
 		.text-pos{
-            top: -19px;
-			left: 35%;
+		    	margin-top: 15px;
 		}
 		.foot-color{
-            color: white;
-            font-size: 0.8125em;
-        }
+            		color: white;
+            		font-size: 0.8125em;
+        	}
 	}
 </style>
 <head>
