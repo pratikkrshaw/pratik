@@ -149,6 +149,13 @@
 	.img-size:hover{
 		box-shadow: 1px 2px 15px 1px black;
 	}
+	#flexx{
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: center;
+        	align-items: center;
+       		margin-top: 50px;
+    	}
 	#view-img{
 		display:none;
 		position: fixed;
@@ -160,9 +167,6 @@
 		z-index: 9999;
 	}
 	#img-s{
-		position: absolute;
-		left: 32%;
-		top: 10%;
 		width:35%;
 		height: auto;
 	}
@@ -181,16 +185,10 @@
   		cursor: pointer;
 	}
 	#caption {
-  		position: absolute;
-		bottom: -100px;
-		left: 23%;
 		font-size: 1.2em;
-  		width: 80%;
-  		max-width: 700px;
   		text-align: center;
   		color: #ccc;
-  		padding: 10px 0;
-  		height: 150px;
+  		padding: 15px;
 	}
 	.flex-img{
 		display: flex;
@@ -226,15 +224,16 @@
             		font-size: 1.7em;
             		padding: 10px 0 10px 0;
         	}
+		#flexx{
+            		margin-top: 120px;
+        	}
         	.img-size{
 			border-radius: 4px;
 			max-width: 25%;
             		height: auto;
 		}
         	#img-s{
-			left: 18%;
-			top: 20%;
-			width:65%;
+			width:380px;
 		}
         	.close{
            		top: 30px;
@@ -242,9 +241,8 @@
   			font-size: 50px;
 		}
 		#caption {
-			bottom:10%;
-			left: 15%;
-			font-size: 1.5em;
+			padding: 50px;
+			font-size: 1.3em;
 		}
         	.foot-color{
             		color: white;
@@ -261,19 +259,19 @@
         	.lshape{
             		margin: 0% 50% 0 45%;
         	}
+		#flexx{
+            		margin-top: 120px;
+        	}
 		#img-s{
-			left: 18%;
-			top: 20%;
-			width:65%;
+			width:300px;
 		}
 		.close {
   			right: 30px;
   			font-size: 30px;
 		}
 		#caption {
-			bottom:0;
-			left: 10%;
-			font-size: 0.8em;
+			padding: 40px;
+			font-size: 0.9em;
 		}
 		.img-size{
 			border-radius: 4px;
@@ -396,8 +394,10 @@
 		</div>
 		<div id="view-img" onclick="this.style.display='none'">
 			<span class="close">&times;</span>
-			<img id="img-s">
-			<div id="caption"></div>
+			<div id="flexx">
+				<img id="img-s">
+				<div id="caption"></div>
+			</div>
 		</div>
 	</div>
 	<div>
