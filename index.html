@@ -92,6 +92,43 @@
 			border-color:white;
 		}
 	}
+	#laughclose{
+        	display:none;
+        	margin:0 10% 0 10%;
+    	}
+	#laugh{
+        	position: absolute;
+        	background-color: rgba(255, 83, 71,0.8);
+        	text-align: center;
+        	width: 80%;
+        	height: 55px;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+    	}
+    	h3{
+        	color: white;
+        	font-family: Bungee;
+    	}
+    	.img-laugh{
+		width: 50px;
+        	height: 50px;
+        	margin-left: -12px;
+        	opacity: 0.9;
+	}
+    	.close {
+  		position: absolute;
+  		right: 15px;
+  		color: #f1f1f1;
+  		font-size: 40px;
+  		font-weight: bold;
+  		transition: 0.3s;
+	}
+	.close:hover,.close:focus {
+  		color: #bbb;
+  		text-decoration: none;
+  		cursor: pointer;
+	}
 	.head-align{
         	margin: 8% 20% 0 20%;
     	}
@@ -249,6 +286,14 @@
         	.lshape{
             		margin: 0% 50% 0 45%;
         	}
+		h3{
+            		font-size: 0.9em;
+        	}
+        	.img-laugh{
+	    		width: 40px;
+            		height: 40px;
+            		margin-left: -12px;
+	    	}
         	.head-align{
             		margin: 50% 4% 0 4%;
     		}
@@ -286,6 +331,13 @@
 	</div>
     	<div class="heading">
 		<img src="img/logo.png">
+    	</div>
+	<div id="laughclose" onclick="this.style.display='none'">
+    		<div id="laugh">
+        		<img src="happy.gif" alt="Laughing Emote GIF" class="img-laugh">
+        		<span class="close">&times;</span>
+        		<h3>LOL! I'm Not A BUTTON</h3>
+    		</div>
     	</div>
     	<div class="head-align">
 		<div class="bord">    
@@ -419,6 +471,14 @@
 	    	function myloadingfunc(){
 	    		preloader.style.display="none";
 	    	}
+		var laughh = document.getElementById("laughclose");
+		function laughwarning(element){
+ 			laughh.style.display = "block";
+		}
+		var span = document.getElementsByClassName("close")[0];
+		span.onclick = function() { 
+  			laughh.style.display = "none";
+		}
     	</script>
 </body>
 </main>
