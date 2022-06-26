@@ -187,6 +187,26 @@
 	.img-size{
 		width: 30px;
 	}
+	#head-aligning{
+	        background-color:black;
+        	border-radius: 6px;
+        	text-align:left; 
+        	margin: 0 10% 0 10%;
+        	color: white;
+        	opacity: 0.9;
+        	padding: 2%;
+        	cursor: pointer;
+        	font-size: 30px;
+    	}
+    	#des{
+        	background-color:white;
+        	border-radius: 6px;
+        	text-align:left; 
+        	padding: 2%;
+        	margin: 0 10% 0 10%;
+        	opacity: 0.9;
+        	cursor: pointer;
+    	}
 	.headings{
 		text-align: center;
 		font-size: 2.1875em;
@@ -453,6 +473,14 @@
         	text-align:center;
     	}
     	@media(min-width:941px) and (max-width: 980px){
+		#head-aligning{
+        		margin: 0 5% 0 5%;
+        		font-size: 15px;
+        	}
+        	#des{
+            		font-size: 8px;
+        		margin: 0 5% 0 5%;
+        	}
         	.menu-box{
             		padding: 22px 0 0 65px;
         	}  
@@ -640,6 +668,13 @@
 		.projects{
 		    	max-width: 90%;
 	    	}
+		#head-aligning{
+        		margin: 0 5% 0 5%;
+        		font-size: 20px;
+        	}
+        	#des{
+        		margin: 0 5% 0 5%;
+        	}	
         	.headings{
             		font-size: 28px;
 		    	margin-left: 5%;
@@ -819,21 +854,41 @@
     	</div>
 	<h2 class="headings" id="project" >My Projects</h2>
     	<div class="heading-box logo">
+		<details>
+            		<summary id="head-aligning">1. LOGIN PAGE</summary>
+            		<p id="des">This Page was created using HTML and CSS.An Login Page which can be used by the admin for loggind in.A login page is a web page or an entry page to a website that requires user identification and authentication, regularly performed by entering a username and password combination. Logins may provide access to an entire site or part of a website.</p>
+        	</details>
+        	<br>
 		<a href="data/loginpage.html" target="_blank"><img src="img/project1.PNG" alt="Project: Login Page" class="projects"></a>
 		<form action="data/loginpage.html" target="_blank">
 			<button type="submit" class="proj-butt" >Project 1: Login Page</button>
 		</form>
 		<hr id="line">
+		<details>
+            		<summary id="head-aligning">2. SNAKE GAME</summary>
+            		<p id="des">This game was created using C Language.Snake is a video game genre where the player maneuvers a growing line that becomes a primary obstacle to itself.To download the game you can click the below button or click the image.</p>
+        	</details>
+        	<br>
 		<a href="data/Snake.exe" target="_blank"><img src="img/project2.PNG" alt="Project: Snake Game" class="projects"></a>
 		<form action="data/Snake.exe" target="_blank">
 			<button type="submit" class="proj-butt" >Project 2: Snake Game</button>
 		</form>
         	<hr id="line">
+		<details>
+            		<summary id="head-aligning">3. LOADING ANIMATION</summary>
+            		<p id="des">This Loading Page was created using HTML and CSS.You can use this animation on your page to make it more appealing and more professional. This animation will appear till the page is fully loaded, which will help the customers/users to know that something is happening when clicking something.</p>
+        	</details>
+        	<br>
         	<a href="data/newshape.html" target="_blank"><img src="img/project3.png" alt="Project: Loading Animation" class="projects"></a>
         	<form action="data/newshape.html" target="__blank">
             		<button type="submit" class="proj-butt">Project 3: Loading Animation</button>
         	</form>
 		<hr id="line">
+		<details>
+            		<summary id="head-aligning">4. BANK MANAGEMENT SYSTEM</summary>
+            		<p id="des">Bank Management System which was created using "Java" and DataBase used was "Oracle", to connect the java program with database we used the Java's API called "JDBC". To Build the interface of the project we have used java's inbuild package "Swing".</p>
+        	</details>
+        	<br>
 		<a href="https://github.com/pratikkrshaw/bankmanagementsystem" target="_blank"><img src="img/bms.png" alt="Bank Management System" class="projects"></a>
         	<form action="https://github.com/pratikkrshaw/bankmanagementsystem" target="_blank">
             		<button type="submit" class="proj-butt">Bank Management System</button>
